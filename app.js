@@ -68,9 +68,9 @@ app.get('/admin/list', function(req, res){
 			_id:1,
 			director:'tom',
 			country:'America',
-			year:2014,
-			language:'english',
-			flash:'http://player.youku.com/player.php/sid/XNjA1Njc0NTUy/v.swf'
+			year:2014
+			// language:'english',
+			// flash:'http://player.youku.com/player.php/sid/XNjA1Njc0NTUy/v.swf'
 		}
 		]
 	})
