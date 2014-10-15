@@ -1,0 +1,29 @@
+{
+  "name": "movieTask",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chenshaonian/movieTask",
+  "authors": [
+    "chenshaonian <594171673@qq.com>"
+  ],
+  "description": "movie website with nodejs",
+  "main": "app.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "movieTask"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
