@@ -10,6 +10,7 @@ block content
 						th movieDirector
 						th movieCountry
 						th movieYear
+						th movieCreateTime
 						th show
 						th update
 						th delete
@@ -20,6 +21,7 @@ block content
 							td #{item.director}
 							td #{item.country}
 							td #{item.year}
+							td 
 							td: a(target="_blank", href="../movie/#{item._id}") chakan
 							td: a(target="_blank", href="../admin/update/#{item._id}") update
 							td
