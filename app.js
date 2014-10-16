@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port, function(req, res){
 	console.log('start port at :' + port);
 });
+app.locals.moment = require('moment');
 
 app.get('/', function(req, res){
 	Movie.fetch(function(err, movies){
