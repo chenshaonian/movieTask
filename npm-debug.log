@@ -1,0 +1,464 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bcrypt',
+1 verbose cli   '--nodedir' ]
+2 info using npm@1.4.21
+3 info using node@v0.13.0-pre
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'bcrypt', null ]
+6 verbose cache add name=undefined spec="bcrypt" args=["bcrypt",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'bcrypt',
+7 verbose parsed url   path: 'bcrypt',
+7 verbose parsed url   href: 'bcrypt' }
+8 silly lockFile 51684124-bcrypt bcrypt
+9 verbose lock bcrypt /root/.npm/51684124-bcrypt.lock
+10 silly lockFile 51684124-bcrypt bcrypt
+11 silly lockFile 51684124-bcrypt bcrypt
+12 verbose addNamed [ 'bcrypt', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 1351601c-bcrypt bcrypt@
+15 verbose lock bcrypt@ /root/.npm/1351601c-bcrypt.lock
+16 silly addNameRange { name: 'bcrypt', range: '*', hasData: false }
+17 verbose request where is /bcrypt
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 35cecab015342120
+20 verbose url raw /bcrypt
+21 verbose url resolving [ 'https://registry.npmjs.org/', './bcrypt' ]
+22 verbose url resolved https://registry.npmjs.org/bcrypt
+23 verbose request where is https://registry.npmjs.org/bcrypt
+24 info trying registry request attempt 1 at 19:37:29
+25 verbose etag "3IPU9Q845JPBC06WKDBHWE4QW"
+26 http GET https://registry.npmjs.org/bcrypt
+27 http 304 https://registry.npmjs.org/bcrypt
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Wed, 29 Oct 2014 02:37:29 GMT',
+28 silly registry.get     server: 'Apache',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Wed, 29 Oct 2014 02:37:30 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"3IPU9Q845JPBC06WKDBHWE4QW"',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-ty68-TYO',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1414550249.664539,VS0,VE730',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'content-length': '0',
+28 silly registry.get     connection: 'close' } ]
+29 verbose etag https://registry.npmjs.org/bcrypt from cache
+30 silly addNameRange number 2 { name: 'bcrypt', range: '*', hasData: true }
+31 silly addNameRange versions [ 'bcrypt',
+31 silly addNameRange   [ '0.1.2',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.1.3',
+31 silly addNameRange     '0.2.2',
+31 silly addNameRange     '0.2.3',
+31 silly addNameRange     '0.2.4',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.3.1',
+31 silly addNameRange     '0.3.2',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.7.0',
+31 silly addNameRange     '0.7.1',
+31 silly addNameRange     '0.7.2',
+31 silly addNameRange     '0.7.3',
+31 silly addNameRange     '0.7.4',
+31 silly addNameRange     '0.7.5',
+31 silly addNameRange     '0.7.6',
+31 silly addNameRange     '0.7.7',
+31 silly addNameRange     '0.7.8',
+31 silly addNameRange     '0.8.0' ] ]
+32 verbose addNamed [ 'bcrypt', '0.8.0' ]
+33 verbose addNamed [ '0.8.0', '0.8.0' ]
+34 silly lockFile d33dacdf-bcrypt-0-8-0 bcrypt@0.8.0
+35 verbose lock bcrypt@0.8.0 /root/.npm/d33dacdf-bcrypt-0-8-0.lock
+36 silly lockFile d33dacdf-bcrypt-0-8-0 bcrypt@0.8.0
+37 silly lockFile d33dacdf-bcrypt-0-8-0 bcrypt@0.8.0
+38 silly lockFile 1351601c-bcrypt bcrypt@
+39 silly lockFile 1351601c-bcrypt bcrypt@
+40 silly resolved [ { name: 'bcrypt',
+40 silly resolved     description: 'A bcrypt library for NodeJS.',
+40 silly resolved     keywords:
+40 silly resolved      [ 'bcrypt',
+40 silly resolved        'password',
+40 silly resolved        'auth',
+40 silly resolved        'authentication',
+40 silly resolved        'encryption',
+40 silly resolved        'crypt',
+40 silly resolved        'crypto' ],
+40 silly resolved     main: './bcrypt',
+40 silly resolved     version: '0.8.0',
+40 silly resolved     author: { name: 'Nick Campbell', url: 'https://github.com/ncb000gt' },
+40 silly resolved     engines: { node: '>= 0.6.0' },
+40 silly resolved     repository:
+40 silly resolved      { type: 'git',
+40 silly resolved        url: 'https://github.com/ncb000gt/node.bcrypt.js.git' },
+40 silly resolved     licenses: [ [Object] ],
+40 silly resolved     bugs: { url: 'https://github.com/ncb000gt/node.bcrypt.js/issues' },
+40 silly resolved     scripts:
+40 silly resolved      { test: 'node-gyp configure build && nodeunit test',
+40 silly resolved        install: 'node-gyp rebuild' },
+40 silly resolved     dependencies: { bindings: '1.0.0', nan: '1.3.0' },
+40 silly resolved     devDependencies: { nodeunit: '>=0.6.4' },
+40 silly resolved     contributors:
+40 silly resolved      [ [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object],
+40 silly resolved        [Object] ],
+40 silly resolved     gypfile: true,
+40 silly resolved     gitHead: '067b4e5fea672f1953632668acb40b88222eb737',
+40 silly resolved     homepage: 'https://github.com/ncb000gt/node.bcrypt.js',
+40 silly resolved     _id: 'bcrypt@0.8.0',
+40 silly resolved     _shasum: 'b8f226406e5b78c838833a8468a4a0402cbc93c9',
+40 silly resolved     _from: 'bcrypt@',
+40 silly resolved     _npmVersion: '1.4.14',
+40 silly resolved     _npmUser: { name: 'shtylman', email: 'shtylman@gmail.com' },
+40 silly resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+40 silly resolved     dist:
+40 silly resolved      { shasum: 'b8f226406e5b78c838833a8468a4a0402cbc93c9',
+40 silly resolved        tarball: 'http://registry.npmjs.org/bcrypt/-/bcrypt-0.8.0.tgz' },
+40 silly resolved     directories: {},
+40 silly resolved     _resolved: 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.0.tgz',
+40 silly resolved     readme: 'ERROR: No README data found!' } ]
+41 info install bcrypt@0.8.0 into /nodejs/movieTask
+42 info installOne bcrypt@0.8.0
+43 verbose node_modules/bcrypt unbuild
+44 verbose tar unpack /root/.npm/bcrypt/0.8.0/package.tgz
+45 silly lockFile a6f1fe63-js-movieTask-node-modules-bcrypt tar:///nodejs/movieTask/node_modules/bcrypt
+46 verbose lock tar:///nodejs/movieTask/node_modules/bcrypt /root/.npm/a6f1fe63-js-movieTask-node-modules-bcrypt.lock
+47 silly lockFile 2396c7bd-oot-npm-bcrypt-0-8-0-package-tgz tar:///root/.npm/bcrypt/0.8.0/package.tgz
+48 verbose lock tar:///root/.npm/bcrypt/0.8.0/package.tgz /root/.npm/2396c7bd-oot-npm-bcrypt-0-8-0-package-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry .npmignore
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm extractEntry LICENSE
+54 silly gunzTarPerm extractEntry bcrypt.js
+55 silly gunzTarPerm extractEntry CHANGELOG.md
+56 silly gunzTarPerm extractEntry werker.yml
+57 silly gunzTarPerm extractEntry .travis.yml
+58 silly gunzTarPerm extractEntry examples/async_compare.js
+59 silly gunzTarPerm extractEntry examples/forever_gen_salt.js
+60 silly gunzTarPerm extractEntry test/async.js
+61 silly gunzTarPerm extractEntry test/repetitions.js
+62 silly gunzTarPerm extractEntry test/sync.js
+63 silly gunzTarPerm extractEntry Makefile
+64 silly gunzTarPerm extractEntry src/bcrypt.cc
+65 silly gunzTarPerm extractEntry src/bcrypt_node.cc
+66 silly gunzTarPerm extractEntry src/blowfish.cc
+67 silly gunzTarPerm extractEntry src/node_blf.h
+68 silly gunzTarPerm extractEntry binding.gyp
+69 silly lockFile a6f1fe63-js-movieTask-node-modules-bcrypt tar:///nodejs/movieTask/node_modules/bcrypt
+70 silly lockFile a6f1fe63-js-movieTask-node-modules-bcrypt tar:///nodejs/movieTask/node_modules/bcrypt
+71 silly lockFile 2396c7bd-oot-npm-bcrypt-0-8-0-package-tgz tar:///root/.npm/bcrypt/0.8.0/package.tgz
+72 silly lockFile 2396c7bd-oot-npm-bcrypt-0-8-0-package-tgz tar:///root/.npm/bcrypt/0.8.0/package.tgz
+73 info preinstall bcrypt@0.8.0
+74 verbose readDependencies using package.json deps
+75 verbose readDependencies using package.json deps
+76 verbose cache add [ 'bindings@1.0.0', null ]
+77 verbose cache add name=undefined spec="bindings@1.0.0" args=["bindings@1.0.0",null]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: 'bindings@1.0.0',
+78 verbose parsed url   path: 'bindings@1.0.0',
+78 verbose parsed url   href: 'bindings@1.0.0' }
+79 verbose cache add [ 'nan@1.3.0', null ]
+80 verbose cache add name=undefined spec="nan@1.3.0" args=["nan@1.3.0",null]
+81 verbose parsed url { protocol: null,
+81 verbose parsed url   slashes: null,
+81 verbose parsed url   auth: null,
+81 verbose parsed url   host: null,
+81 verbose parsed url   port: null,
+81 verbose parsed url   hostname: null,
+81 verbose parsed url   hash: null,
+81 verbose parsed url   search: null,
+81 verbose parsed url   query: null,
+81 verbose parsed url   pathname: 'nan@1.3.0',
+81 verbose parsed url   path: 'nan@1.3.0',
+81 verbose parsed url   href: 'nan@1.3.0' }
+82 verbose cache add name="bindings" spec="1.0.0" args=["bindings","1.0.0"]
+83 verbose parsed url { protocol: null,
+83 verbose parsed url   slashes: null,
+83 verbose parsed url   auth: null,
+83 verbose parsed url   host: null,
+83 verbose parsed url   port: null,
+83 verbose parsed url   hostname: null,
+83 verbose parsed url   hash: null,
+83 verbose parsed url   search: null,
+83 verbose parsed url   query: null,
+83 verbose parsed url   pathname: '1.0.0',
+83 verbose parsed url   path: '1.0.0',
+83 verbose parsed url   href: '1.0.0' }
+84 verbose addNamed [ 'bindings', '1.0.0' ]
+85 verbose addNamed [ '1.0.0', '1.0.0' ]
+86 silly lockFile f01e5454-bindings-1-0-0 bindings@1.0.0
+87 verbose lock bindings@1.0.0 /root/.npm/f01e5454-bindings-1-0-0.lock
+88 verbose cache add name="nan" spec="1.3.0" args=["nan","1.3.0"]
+89 verbose parsed url { protocol: null,
+89 verbose parsed url   slashes: null,
+89 verbose parsed url   auth: null,
+89 verbose parsed url   host: null,
+89 verbose parsed url   port: null,
+89 verbose parsed url   hostname: null,
+89 verbose parsed url   hash: null,
+89 verbose parsed url   search: null,
+89 verbose parsed url   query: null,
+89 verbose parsed url   pathname: '1.3.0',
+89 verbose parsed url   path: '1.3.0',
+89 verbose parsed url   href: '1.3.0' }
+90 verbose addNamed [ 'nan', '1.3.0' ]
+91 verbose addNamed [ '1.3.0', '1.3.0' ]
+92 silly lockFile b8539500-nan-1-3-0 nan@1.3.0
+93 verbose lock nan@1.3.0 /root/.npm/b8539500-nan-1-3-0.lock
+94 verbose request where is /bindings
+95 verbose request registry https://registry.npmjs.org/
+96 verbose url raw /bindings
+97 verbose url resolving [ 'https://registry.npmjs.org/', './bindings' ]
+98 verbose url resolved https://registry.npmjs.org/bindings
+99 verbose request where is https://registry.npmjs.org/bindings
+100 info trying registry request attempt 1 at 19:37:30
+101 verbose etag "6SJRISMK25A1UDWM33HHCDB3Q"
+102 http GET https://registry.npmjs.org/bindings
+103 verbose request where is /nan
+104 verbose request registry https://registry.npmjs.org/
+105 verbose url raw /nan
+106 verbose url resolving [ 'https://registry.npmjs.org/', './nan' ]
+107 verbose url resolved https://registry.npmjs.org/nan
+108 verbose request where is https://registry.npmjs.org/nan
+109 info trying registry request attempt 1 at 19:37:30
+110 verbose etag "4QHBB3KM0BSFWQGU7N2BM6J49"
+111 http GET https://registry.npmjs.org/nan
+112 http 304 https://registry.npmjs.org/bindings
+113 silly registry.get cb [ 304,
+113 silly registry.get   { date: 'Wed, 29 Oct 2014 02:37:31 GMT',
+113 silly registry.get     server: 'Apache',
+113 silly registry.get     via: '1.1 varnish',
+113 silly registry.get     'last-modified': 'Wed, 29 Oct 2014 02:36:49 GMT',
+113 silly registry.get     'cache-control': 'max-age=60',
+113 silly registry.get     etag: '"6SJRISMK25A1UDWM33HHCDB3Q"',
+113 silly registry.get     age: '55',
+113 silly registry.get     'x-served-by': 'cache-ty68-TYO',
+113 silly registry.get     'x-cache': 'HIT',
+113 silly registry.get     'x-cache-hits': '2',
+113 silly registry.get     'x-timer': 'S1414550251.216067,VS0,VE0',
+113 silly registry.get     vary: 'Accept',
+113 silly registry.get     'content-length': '0',
+113 silly registry.get     connection: 'close' } ]
+114 verbose etag https://registry.npmjs.org/bindings from cache
+115 silly lockFile f01e5454-bindings-1-0-0 bindings@1.0.0
+116 silly lockFile f01e5454-bindings-1-0-0 bindings@1.0.0
+117 http 304 https://registry.npmjs.org/nan
+118 silly registry.get cb [ 304,
+118 silly registry.get   { date: 'Wed, 29 Oct 2014 02:37:31 GMT',
+118 silly registry.get     server: 'Apache',
+118 silly registry.get     via: '1.1 varnish',
+118 silly registry.get     'last-modified': 'Wed, 29 Oct 2014 02:36:59 GMT',
+118 silly registry.get     'cache-control': 'max-age=60',
+118 silly registry.get     etag: '"4QHBB3KM0BSFWQGU7N2BM6J49"',
+118 silly registry.get     age: '32',
+118 silly registry.get     'x-served-by': 'cache-ty68-TYO',
+118 silly registry.get     'x-cache': 'HIT',
+118 silly registry.get     'x-cache-hits': '4',
+118 silly registry.get     'x-timer': 'S1414550251.374273,VS0,VE0',
+118 silly registry.get     vary: 'Accept',
+118 silly registry.get     'content-length': '0',
+118 silly registry.get     connection: 'close' } ]
+119 verbose etag https://registry.npmjs.org/nan from cache
+120 silly lockFile b8539500-nan-1-3-0 nan@1.3.0
+121 silly lockFile b8539500-nan-1-3-0 nan@1.3.0
+122 silly resolved [ { name: 'bindings',
+122 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+122 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+122 silly resolved     version: '1.0.0',
+122 silly resolved     author:
+122 silly resolved      { name: 'Nathan Rajlich',
+122 silly resolved        email: 'nathan@tootallnate.net',
+122 silly resolved        url: 'http://tootallnate.net' },
+122 silly resolved     repository:
+122 silly resolved      { type: 'git',
+122 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+122 silly resolved     main: './bindings.js',
+122 silly resolved     _id: 'bindings@1.0.0',
+122 silly resolved     dist:
+122 silly resolved      { shasum: 'c3ccde60e9de6807c6f1aa4ef4843af29191c828',
+122 silly resolved        tarball: 'http://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz' },
+122 silly resolved     maintainers: [ [Object], [Object] ],
+122 silly resolved     directories: {},
+122 silly resolved     _shasum: 'c3ccde60e9de6807c6f1aa4ef4843af29191c828',
+122 silly resolved     _from: 'bindings@1.0.0',
+122 silly resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz',
+122 silly resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+122 silly resolved     readme: 'ERROR: No README data found!',
+122 silly resolved     homepage: 'https://github.com/TooTallNate/node-bindings' },
+122 silly resolved   { name: 'nan',
+122 silly resolved     version: '1.3.0',
+122 silly resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+122 silly resolved     main: 'include_dirs.js',
+122 silly resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+122 silly resolved     scripts:
+122 silly resolved      { test: 'tap --gc test/js/*-test.js',
+122 silly resolved        'rebuild-tests': 'node-gyp rebuild --directory test' },
+122 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+122 silly resolved     devDependencies:
+122 silly resolved      { bindings: '~1.2.1',
+122 silly resolved        'node-gyp': '~1.0.1',
+122 silly resolved        tap: '~0.4.12',
+122 silly resolved        xtend: '~4.0.0' },
+122 silly resolved     license: 'MIT',
+122 silly resolved     gitHead: 'e482fbe142e58373d5a24f4e5a60c61e22a13f83',
+122 silly resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+122 silly resolved     homepage: 'https://github.com/rvagg/nan',
+122 silly resolved     _id: 'nan@1.3.0',
+122 silly resolved     _shasum: '9a5b8d5ef97a10df3050e59b2c362d3baf779742',
+122 silly resolved     _from: 'nan@1.3.0',
+122 silly resolved     _npmVersion: '1.4.21',
+122 silly resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+122 silly resolved     maintainers: [ [Object] ],
+122 silly resolved     dist:
+122 silly resolved      { shasum: '9a5b8d5ef97a10df3050e59b2c362d3baf779742',
+122 silly resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-1.3.0.tgz' },
+122 silly resolved     directories: {},
+122 silly resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.3.0.tgz',
+122 silly resolved     readme: 'ERROR: No README data found!' } ]
+123 info install bindings@1.0.0 into /nodejs/movieTask/node_modules/bcrypt
+124 info install nan@1.3.0 into /nodejs/movieTask/node_modules/bcrypt
+125 info installOne bindings@1.0.0
+126 info installOne nan@1.3.0
+127 verbose node_modules/bcrypt/node_modules/bindings unbuild
+128 verbose node_modules/bcrypt/node_modules/nan unbuild
+129 verbose tar unpack /root/.npm/bindings/1.0.0/package.tgz
+130 silly lockFile 04225b13-les-bcrypt-node-modules-bindings tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/bindings
+131 verbose lock tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/bindings /root/.npm/04225b13-les-bcrypt-node-modules-bindings.lock
+132 silly lockFile 3c5ca143-t-npm-bindings-1-0-0-package-tgz tar:///root/.npm/bindings/1.0.0/package.tgz
+133 verbose lock tar:///root/.npm/bindings/1.0.0/package.tgz /root/.npm/3c5ca143-t-npm-bindings-1-0-0-package-tgz.lock
+134 verbose tar unpack /root/.npm/nan/1.3.0/package.tgz
+135 silly lockFile e360071b--modules-bcrypt-node-modules-nan tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/nan
+136 verbose lock tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/nan /root/.npm/e360071b--modules-bcrypt-node-modules-nan.lock
+137 silly lockFile 002141dc-r-root-npm-nan-1-3-0-package-tgz tar:///root/.npm/nan/1.3.0/package.tgz
+138 verbose lock tar:///root/.npm/nan/1.3.0/package.tgz /root/.npm/002141dc-r-root-npm-nan-1-3-0-package-tgz.lock
+139 silly gunzTarPerm modes [ '755', '644' ]
+140 silly gunzTarPerm modes [ '755', '644' ]
+141 silly gunzTarPerm extractEntry package.json
+142 silly gunzTarPerm extractEntry README.md
+143 silly gunzTarPerm extractEntry bindings.js
+144 silly gunzTarPerm extractEntry package.json
+145 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+146 silly gunzTarPerm extractEntry README.md
+147 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+148 silly gunzTarPerm extractEntry LICENSE
+149 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+150 silly lockFile 04225b13-les-bcrypt-node-modules-bindings tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/bindings
+151 silly lockFile 04225b13-les-bcrypt-node-modules-bindings tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/bindings
+152 silly lockFile 3c5ca143-t-npm-bindings-1-0-0-package-tgz tar:///root/.npm/bindings/1.0.0/package.tgz
+153 silly lockFile 3c5ca143-t-npm-bindings-1-0-0-package-tgz tar:///root/.npm/bindings/1.0.0/package.tgz
+154 silly gunzTarPerm extractEntry include_dirs.js
+155 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+156 silly gunzTarPerm extractEntry CHANGELOG.md
+157 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+158 info preinstall bindings@1.0.0
+159 verbose readDependencies using package.json deps
+160 verbose readDependencies using package.json deps
+161 silly resolved []
+162 verbose about to build /nodejs/movieTask/node_modules/bcrypt/node_modules/bindings
+163 info build /nodejs/movieTask/node_modules/bcrypt/node_modules/bindings
+164 verbose linkStuff [ false,
+164 verbose linkStuff   false,
+164 verbose linkStuff   false,
+164 verbose linkStuff   '/nodejs/movieTask/node_modules/bcrypt/node_modules' ]
+165 info linkStuff bindings@1.0.0
+166 verbose linkBins bindings@1.0.0
+167 verbose linkMans bindings@1.0.0
+168 verbose rebuildBundles bindings@1.0.0
+169 info install bindings@1.0.0
+170 info postinstall bindings@1.0.0
+171 silly gunzTarPerm extractEntry .dntrc
+172 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+173 silly gunzTarPerm extractEntry nan.h
+174 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+175 silly gunzTarPerm extractEntry appveyor.yml
+176 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+177 silly lockFile e360071b--modules-bcrypt-node-modules-nan tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/nan
+178 silly lockFile e360071b--modules-bcrypt-node-modules-nan tar:///nodejs/movieTask/node_modules/bcrypt/node_modules/nan
+179 silly lockFile 002141dc-r-root-npm-nan-1-3-0-package-tgz tar:///root/.npm/nan/1.3.0/package.tgz
+180 silly lockFile 002141dc-r-root-npm-nan-1-3-0-package-tgz tar:///root/.npm/nan/1.3.0/package.tgz
+181 info preinstall nan@1.3.0
+182 verbose readDependencies using package.json deps
+183 verbose readDependencies using package.json deps
+184 silly resolved []
+185 verbose about to build /nodejs/movieTask/node_modules/bcrypt/node_modules/nan
+186 info build /nodejs/movieTask/node_modules/bcrypt/node_modules/nan
+187 verbose linkStuff [ false,
+187 verbose linkStuff   false,
+187 verbose linkStuff   false,
+187 verbose linkStuff   '/nodejs/movieTask/node_modules/bcrypt/node_modules' ]
+188 info linkStuff nan@1.3.0
+189 verbose linkBins nan@1.3.0
+190 verbose linkMans nan@1.3.0
+191 verbose rebuildBundles nan@1.3.0
+192 info install nan@1.3.0
+193 info postinstall nan@1.3.0
+194 verbose about to build /nodejs/movieTask/node_modules/bcrypt
+195 info build /nodejs/movieTask/node_modules/bcrypt
+196 verbose linkStuff [ false, false, false, '/nodejs/movieTask/node_modules' ]
+197 info linkStuff bcrypt@0.8.0
+198 verbose linkBins bcrypt@0.8.0
+199 verbose linkMans bcrypt@0.8.0
+200 verbose rebuildBundles bcrypt@0.8.0
+201 verbose rebuildBundles [ 'bindings', 'nan' ]
+202 info install bcrypt@0.8.0
+203 verbose unsafe-perm in lifecycle false
+204 info bcrypt@0.8.0 Failed to exec install script
+205 verbose node_modules/bcrypt unbuild
+206 info preuninstall bcrypt@0.8.0
+207 info uninstall bcrypt@0.8.0
+208 verbose true,/nodejs/movieTask/node_modules,/nodejs/movieTask/node_modules unbuild bcrypt@0.8.0
+209 info postuninstall bcrypt@0.8.0
+210 error bcrypt@0.8.0 install: `node-gyp rebuild`
+210 error Exit status 1
+211 error Failed at the bcrypt@0.8.0 install script.
+211 error This is most likely a problem with the bcrypt package,
+211 error not with npm itself.
+211 error Tell the author that this fails on your system:
+211 error     node-gyp rebuild
+211 error You can get their info via:
+211 error     npm owner ls bcrypt
+211 error There is likely additional logging output above.
+212 error System Linux 3.2.0-67-generic-pae
+213 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "bcrypt" "--nodedir"
+214 error cwd /nodejs/movieTask
+215 error node -v v0.13.0-pre
+216 error npm -v 1.4.21
+217 error code ELIFECYCLE
+218 verbose exit [ 1, true ]

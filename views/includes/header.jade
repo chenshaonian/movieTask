@@ -3,3 +3,41 @@
 		.page-header
 			h1= title
 			small magic
+.navbar.navbar-default.navbar-fixed-bottom
+	.container
+		.navbar-header
+			a.navbar-brand(href='/') magic
+		p.navbar-text.navbar-right
+			a.navbar-link(href='#', data-toggle='modal',data-target='#signupModal') signup
+			span &nbsp;|&nbsp;
+			a.navbar-link(href='#', data-toggle='modal',data-target='#signinModal') signin
+#signupModal.modal.fade
+	.modal-dialog
+		.modal-content
+			form(method="post", action="/user/signup")
+				.modal-header register
+				.modal-body
+					.form-group
+						label(for="signupName") username
+						input#signupName.form-control(name="user[name]", type="text")
+					.form-group
+						label(for="signupPassword") password
+						input#signupPassword.form-control(name="user[password]", type="password")
+				.modal-footer
+					button.btn.btn-default(type="button", data-dismiss="modal") close
+					button.btn.btn-success(type="submit") submit
+#signinModal.modal.fade
+	.modal-dialog
+		.modal-content
+			form(method="post", action="/user/signin")
+				.modal-header signin
+				.modal-body
+					.form-group
+						label(for="signinName") username
+						input#signinName.form-control(name="user[name]", type="text")
+					.form-group
+						label(for="signinPassword") password
+						input#signinPassword.form-control(name="user[password]", type="password")
+				.modal-footer
+					button.btn.btn-default(type="button", data-dismiss="modal") close
+					button.btn.btn-success(type="submit") submit

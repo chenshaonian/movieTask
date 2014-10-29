@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
 var Movie = require('./models/movie');
+var User = require('./models/user');
 var _=require('underscore');
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 3000;
@@ -31,32 +32,83 @@ app.get('/', function(req, res){
 		}
 	});
 
-
-		// res.render('index', {
-		// title:'movei index',
-		// movies:[{
-		// 	title:'transforman3',
-		// 	_id:1,
-		// 	poster:'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		// },{
-		// 	title:'transforman3',
-		// 	_id:2,
-		// 	poster:'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		// },{
-		// 	title:'transforman3',
-		// 	_id:3,
-		// 	poster:'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		// },{
-		// 	title:'transforman3',
-		// 	_id:4,
-		// 	poster:'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		// },{
-		// 	title:'transforman3',
-		// 	_id:5,
-		// 	poster:'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5'
-		// },
-		// ]
 });
+
+//signup
+app.post('/user/signup', function(req, res){
+	var _user = req.body.user;
+	//var _user = req.param('user');
+	//var req.query.userid
+
+	User.find({name:_user.name}, function(err, user){
+		if(err){
+			console.log(err);
+		}
+		if(user){
+			console.log('user already exist ')
+			return res.redirect('/');
+		}else{
+			var user = new User(_user);
+			user.save(function(err, user){
+				if(err) {
+					console.log(err);
+				}else{
+					console.log('signup seccuse');
+					res.redirect('/admin/userlist');
+				}
+
+			})
+		}
+	})
+	
+
+})
+
+//user sign in
+app.post('/user/signin', function(req, res){
+	var _user = req.body.user;
+	var username = _user.name;
+	var password = _user.password;
+
+	User.findByName({name: username},function(err, user){
+		if(err) console.log(err);
+		console.log(user);
+
+		if(!user){
+			console.log('no such user.')
+			return res.redirect('/');
+		}else{
+			user.methods.comparePassword(password, function(err, isMatch){
+				if(err){
+					console.log(err);
+				}
+				if(isMatch){
+					return res.redirect('/');
+					console.log('isMatch success')
+				}else {
+					console.log('password is not match')
+				}
+			})
+		}
+	})
+})
+
+
+//user list
+app.get('/admin/userlist', function(req, res){
+	User.fetch(function(err, users){
+		if(err){
+			console.log(err);
+		}else {
+			res.render('userlist', {
+				title:'userlist page',
+				users: users
+			});
+		}
+	})
+
+});
+
 app.get('/movie/:id', function(req, res){
 	var id = req.params.id;
 
@@ -71,21 +123,9 @@ app.get('/movie/:id', function(req, res){
 		})
 	});
 
-	// res.render('detail', {
-	// 	title:'detail page',
-	// 	movie: {
-	// 		director:'tom',
-	// 		country:'America',
-	// 		title:'transforman3',
-	// 		year:2014,
-	// 		poster:'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5',
-	// 		language:'english',
-	// 		flash:'http://player.youku.com/player.php/sid/XNjA1Njc0NTUy/v.swf',
-	// 		summary:'123123123333ahwdfaosiudfiausipdfupaisdpfawefasdf'
-
-	// 	}
-	// })
+	
 });
+
 
 //list delete movie
 app.delete('/admin/list', function(req, res){
@@ -100,6 +140,20 @@ app.delete('/admin/list', function(req, res){
 		})
 	}
 })
+// delete userlist
+app.delete('/admin/userList', function(req, res){
+	var id = req.query.id;
+	if(id){
+		User.remove({_id: id}, function(err, movie){
+			if(err){
+				console.log(err);
+			}else{
+				res.json({success: 1});
+			}
+		})
+	}
+})
+
 //admin update movie
 app.get('/admin/update/:id', function(req, res){
 	var id = req.params.id;
@@ -173,17 +227,8 @@ app.get('/admin/list', function(req, res){
 		}
 	})
 
-		// movies: [{
-		// 	title:'transforman3',
-		// 	_id:1,
-		// 	director:'tom',
-		// 	country:'America',
-		// 	year:2014
-		// 	// language:'english',
-		// 	// flash:'http://player.youku.com/player.php/sid/XNjA1Njc0NTUy/v.swf'
-		// }
-		// ]
 });
+
 app.get('/admin/movie', function(req, res){
 	res.render('admin', {
 		title:'admin movie page',
